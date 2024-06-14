@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pokemones.ViewPokemonInfo"
+             Title="PokemonInfo">
+    <VerticalStackLayout HorizontalOptions="Center">
+        <Image
+            x:Name="PokemonImage"
+            HeightRequest="300"
+                ></Image>
+        <HorizontalStackLayout>
+            <ListView x:Name="lstHabilidades">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </HorizontalStackLayout>
+        
+    </VerticalStackLayout>
+</ContentPage>
